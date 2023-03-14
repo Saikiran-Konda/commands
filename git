@@ -33,8 +33,8 @@
 	git cherry-pich –abort : it will cancle the cherry operation
 	git fetch : it will get the update from git remote repo and will update your local repo. But it will not erge with local working copy
 	git revert :
-  git reset : resetting is a way to move the the current tip of a branch to a previous commit. This can be done to remove commits from the current branch that we no longer want, or to undo any changes that have been made
-  git pull : it will get the update from git remote repo and will update your local repo as well it will merge with local working copy also
+        git reset : resetting is a way to move the the current tip of a branch to a previous commit. This can be done to remove commits from the current branch that we no longer want, or to undo any changes that have been made
+        git pull : it will get the update from git remote repo and will update your local repo as well it will merge with local working copy also
 	git pull : git fetch + git merge origin/master
 	git branch -m <old name> <new name> : to rename the branch name
 	git branch -m <new name> : to rename current branch name
