@@ -1,0 +1,50 @@
+	git init : creating new repository
+	git clone <<url>> : it will clone the repo from remote to local
+	git status : status of untacked files
+	git add <<file name>>: it will add specified file into staging area
+	git add . : it will add one or more files into staging area
+	git commit -m “ “ : I will commit the changes and  “ with commit message”
+	git remote add origin Remote repo URL : adding the url for the remote repo where your local repo code will be pushed
+	git remote -v :
+	git remote show origin : it will give info on a particular remote ( origin is the remote name)
+	git remote remove origin : it will remove the remote origins
+	git push origin master : push the changes in your local repo to github remote repo
+	git log : it will give all commit id’s
+	git log -N : it will display only N commit id’s
+	git show –pretty=””—name-only<<commit ID>> : it will display all the files which are committed in that particular commit
+	git clean -n : it will preview the changes
+	git clean -f : if we want to remove new files from working area
+	git reset <<file name>> : to untrack the tracked files
+	git revert <<commit id >> : it will revert the changes committed in that particular commit id from local repo
+	git push origin master -f : it will revert the changes from remote repo
+	git branch : it gives the brach names in current repository
+	git branch bugfix : it will crate the bugfix in local git repository
+	git branch -v : it will display all the branch names in your repo, and also tell you what branch you’re currently in
+	git checkout <<branch name >> : it will switch to specified branch
+	git checkout bugfix : switch to bugfix branch
+	git diff master bugfix :
+	git merge bugfix : fix the conflicts
+	git push : pushing the code or changes from local repo to remote repo
+	git pull : pulling the code or changes from remote repo to local repo
+	git push origin –-all :push all branches code to your remote repo
+	git branch -d bugfix :deletes the bugfix branch in local repo
+	git push origin –delete bugfix (or) git push origin bugfix -d (or) git push origin : bugfix :: it will delete a remote branch in the repo
+	git cherry-pick : cherry pick means choose a commit from one branch and apply it onto another branch
+	git cherry-pich –abort : it will cancle the cherry operation
+	git fetch : it will get the update from git remote repo and will update your local repo. But it will not erge with local working copy
+	git revert :
+  git reset : resetting is a way to move the the current tip of a branch to a previous commit. This can be done to remove commits from the current branch that we no longer want, or to undo any changes that have been made
+  git pull : it will get the update from git remote repo and will update your local repo as well it will merge with local working copy also
+	git pull : git fetch + git merge origin/master
+	git branch -m <old name> <new name> : to rename the branch name
+	git branch -m <new name> : to rename current branch name
+	git branch : it will display all the local repo branches
+	git branch -a : display all the remote and local branches
+	git branch -r : display all the remote repo branches
+	git log -p -2 : which shows the difference introduced in each commit
+	git log <file name> : display the commit related to the specified file
+	git log --stat : it will give all the files which are altered and number of lines that were added or deleted from each item
+	git log –graph –decorate : --graph flag draws a text-based graph of commits on left side of commit message. –decorate adds names of branchs of commits shown
+	git log –author=” ” : it will display all the commits which are committed by a particular author
+	git rm : removes files from your index and your working directory so will not be tracked
+ 
