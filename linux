@@ -1,0 +1,24 @@
+-l : list in long format
+-a : all files including those which being with directory
+-F : it is used to classify the directories
+-i : list the inode number in the first column
+-R : recursively list all directories and subdirectries
+-r : display in reverse order
+-t : sorts files by access time
+-d : shows the name of directories and not their contents
+-h : indicates human readable. the mantions file size in kilobytes
+-S : sorts files by file size
+
+ls b* : list files starting with b
+ls *b* : list files having letter b
+ls ? : list single letterd file
+ls ?? : list double lettered file
+ls -l | grep ^d : it will display only the directries from current directory
+ls -ld*/ : it will display only the directoried from the current directory along with soft link directories also
+tree : list contents of directries in a tree-link format
+rmdir : removes directory
+rm : remove file
+rm *.txt : removes all files extention with .txt
+touch : to create new file
+cat : to read contents
+find <<content>> : it will search the files or 
