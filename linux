@@ -36,3 +36,8 @@ find/-mmin -10 : files modified less than 10 minutes ago
 find/-perm 600 : displays the files and directories which have the 600 permissions
 find.-name"*.java"|xargs grep "FTPReadXML : it displays java files which have the FTPReadXML word in those files
 find.-name"*java" -exec chmod 700'{}'\; : it will set the access permission (700) for all ajava files
+chmod << >> <<filename>> : to change file access permission
+chown <<>> <<>> :change file owner and group
+cp <<source >> <<destinatio >> : copy and paste files and directories
+mv <source> <destantion> : to renaming the file
+wc [ ] <filename> : print the number of newlines, words, and bytes in files  { -c : number of bytes, -m : characters, -l :lines, -w : words, -L : length of the longest lines
