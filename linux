@@ -22,3 +22,17 @@ rm *.txt : removes all files extention with .txt
 touch : to create new file
 cat : to read contents
 find <<content>> : it will search the files or 
+find~-name <<filename>> : it will search the filename under looged in user home directory
+find.-name <<filename>> : file under current directory
+find.-iname << >> : file under current directory ignore the case
+find.-perm/a=x : it will search the files which have executr permissions
+find.-type f -empty : empty files
+find.-type f -name ".*" : search all the hidden files in current directory
+find.-mtime 1 : finds all the files modified exact 1 day in current directory
+find/-mtime 1 : find all the files modified exact 1 day in all directories
+find.-mtime -1 : all the files modified less than 1 day
+find/-mtime +1 : find the files modified more than 1 day
+find/-mmin -10 : files modified less than 10 minutes ago
+find/-perm 600 : displays the files and directories which have the 600 permissions
+find.-name"*.java"|xargs grep "FTPReadXML : it displays java files which have the FTPReadXML word in those files
+find.-name"*java" -exec chmod 700'{}'\; : it will set the access permission (700) for all ajava files
