@@ -1,0 +1,43 @@
+vi <filename> : if file nat available it will create or it vill open in vi editor
+
+
+Shift+zz – Save the file and quit
+:q! : force quit with out saving
+:wq : save and quit
+:wq! : save and quit foecefully
+:se nu : to set the line numbers
+:se nonu : to remove the line numbers
+: 4 :it will takes the curser to line number 4
+
+
+i – Insert at cursor (goes into insert mode)
+a – Write after cursor (goes into insert mode)
+A – Write at the end of line (goes into insert mode)
+ESC – Terminate insert mode
+u – Undo last change
+U – Undo all changes to the entire line
+o – Open a new line (goes into insert mode)
+dd – Delete line
+3dd – Delete 3 lines.
+D – Delete contents of line after the cursor
+C – Delete contents of a line after the cursor and insert new text. Press ESC key to end insertion.
+dw – Delete word
+4dw – Delete 4 words
+cw – Change word
+x – Delete character at the cursor
+r – Replace character
+R – Overwrite characters from cursor onward
+s – Substitute one character under cursor continue to insert
+S – Substitute entire line and begin to insert at the beginning of the line
+
+
+^ : moves to beging of the current line
+~ : Change case of individual character
+$ : moves to end of current line
+w : move foreord by word
+b : move back by word
+e : move to end of word
+k – Move cursor up
+j – Move cursor down
+h – Move cursor left
+l – Move cursor right
