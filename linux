@@ -21,6 +21,7 @@ rm : remove file
 rm *.txt : removes all files extention with .txt
 touch : to create new file
 cat : to read contents
+tac : does the same as cat, but display the content in reverse order
 find <<content>> : it will search the files or 
 find~-name <<filename>> : it will search the filename under looged in user home directory
 find.-name <<filename>> : file under current directory
@@ -40,4 +41,13 @@ chmod << >> <<filename>> : to change file access permission
 chown <<>> <<>> :change file owner and group
 cp <<source >> <<destinatio >> : copy and paste files and directories
 mv <source> <destantion> : to renaming the file
-wc [ ] <filename> : print the number of newlines, words, and bytes in files  { -c : number of bytes, -m : characters, -l :lines, -w : words, -L : length of the longest lines
+wc [ ] <filename> : print the number of newlines, words, and bytes in files  { -c : number of bytes, -m : characters, -l :lines, -w : words, -L : length of the longest lines 
+
+head : print the first 10 lines of each file as standard output
+  -n : output the lat N lines insted of the last 10
+head -20 <filename> or head -n 20 <filename> : it will display first 20 lines of a file
+tail : prints last lines of each files 
+tail -n 3 <> : it will display last 3 lines in a specified file
+more : it is a filter for paging text one screenful at a time
+less : less is same as more but you can scroll back and forword
+tr : translate the text from lower case to upper case
