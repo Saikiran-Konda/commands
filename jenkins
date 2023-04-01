@@ -5,3 +5,17 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install java*c
 yum install java* 
 yum install jenkins
+
+yum install git
+
+
+
+service jenkins status
+service jenkins start
+
+
+
+password location:    /var/lib/jenkins/secrets/initialAdminPassword
+
+
+whereis git
