@@ -2,6 +2,12 @@ https://www.jenkins.io/download/
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+amazon-linux-extras
+amazon-linux-extras install java-openjdk11
+
+
+
 yum install java*c
 yum install java* 
 yum install jenkins
@@ -16,6 +22,6 @@ service jenkins start
 
 
 password location:    /var/lib/jenkins/secrets/initialAdminPassword
-
+86cb98f87d91441aa3a5eced7cceddde
 
 whereis git
