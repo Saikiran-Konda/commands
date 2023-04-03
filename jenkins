@@ -25,3 +25,8 @@ password location:    /var/lib/jenkins/secrets/initialAdminPassword
 86cb98f87d91441aa3a5eced7cceddde
 
 whereis git
+
+
+
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
