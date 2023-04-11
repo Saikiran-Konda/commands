@@ -47,4 +47,6 @@
 	git log –graph –decorate : --graph flag draws a text-based graph of commits on left side of commit message. –decorate adds names of branchs of commits shown
 	git log –author=” ” : it will display all the commits which are committed by a particular author
 	git rm : removes files from your index and your working directory so will not be tracked
+	
+	git commit -am "commit message"  :  to add changes and commit updates at a same time
  
