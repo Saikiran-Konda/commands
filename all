@@ -2,5 +2,6 @@ ssh
 
 cd .ssh
 ssh-copy-id <target ip>
+ssh-copy-id root@<target ip>
 
 ansible all -m ping
