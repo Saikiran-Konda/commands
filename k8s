@@ -1,0 +1,20 @@
+ansible playbook for k8s
+
+
+---
+- hosts: kubernetes
+#  become: true
+  user: root
+  tasks:
+  - name: deploy regapp on kubernetes
+    command: kubectl apply -f /root/
+  
+  
+---
+- hosts: kubernetes
+#  become: true
+  user: root
+  
+  tasks:
+  - name: deploy regapp on kubernets
+    command: kubectl apply -f /root/regapp-service.yml
