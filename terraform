@@ -1,0 +1,121 @@
+terraform file extention is .tf (filename.tf)
+
+terraform provisonars
+---------------------
+1. local-exec     :provisioner requires no other configuration, but most other provisioners must connect to the remote system using SSH or WinRM
+2. self
+3. aws_instance
+4. public_ip
+5. when = destroy      :is specified, the provisioner will run when the resource it is defined within is destroyed.
+6. 
+
+sample terraform script
+
+first_instance.tf
+---------------------------------------------------------------------------------
+provider "aws" {
+    region = "us-east-2"
+    access_key = ""
+    secret_key = ""
+}
+
+resource "aws_instance" "intro" {
+    ami = "ami-id"  ## amazon instance id
+    instance_type = "t2.micro"
+    availability_zone = "us-east-2a"
+    key_name = "key-name"
+    vpc_security_group_ids = ["sg-id"]
+    tags = {
+      Name = "instance-Name"
+      project = "name"
+    }
+}
+---------------------------------------------------------------------------------------
+
+commands
+
+terraform.exe init
+terraform.exe validate   :for checking code syntax
+terraform.exe fmt        : arrange code in format
+terraform.exe plan       : it will shows which options going to perform
+terraform apply      : it going to perform operations which are defined in file
+terraform destroy    : it will ddestroy what are created
+
+
+
+-----------------------------------------------------------
+variable.tf
+
+variable Region {
+    default = "us-east-2"
+}
+
+variable ZONE1 {
+    default = "us-east-2a"
+}
+
+variable AMIS {
+    type = map
+    default = {
+      us-east-2 = "ami-id"
+      us-east-1 = "ami-id"
+    }
+}
+-----------------------------------------------------
+-----------------------------------------------------
+
+var.tf
+
+provider "aws" {
+    region = var.REGION
+}
+-----------------------------------------------------
+-----------------------------------------------------
+
+instance.tf
+
+resource "aws_instance" "intro" {
+    ami = var.AMIS[var.REGION]
+    indtance_type = "t2micro"
+    availbility_zone = var.ZONE1
+    key_name = "key-name"
+    vpc_security_group_ids = ["sg-id"]
+    tags = {
+      Name = "instance-Name"
+      project = "name"
+    }
+}
+---------------------------------------------------
+------------------------------------------------------------------------------------------
+
+SSH
+
+provisioner = "file" {
+  source = "files/test.conf"
+  destnation = "/etc/test.conf"
+  
+  connection {
+    type = "ssh"
+    user = "root"
+    password = var.root_password
+    }
+}
+
+
+---------------
+
+winRM
+
+provisioner = "file" {
+  source = "conf/test.conf"
+  destnation = "c:/app/test.conf"
+  
+  connection {
+    type = "winrm"
+    user = "Administrator"
+    password = var.admin_password
+    }
+}
+-------------------
+
+
