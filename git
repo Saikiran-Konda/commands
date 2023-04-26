@@ -49,4 +49,5 @@
 	git rm : removes files from your index and your working directory so will not be tracked
 	
 	git commit -am "commit message"  :  to add changes and commit updates at a same time
+	git
  
