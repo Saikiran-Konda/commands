@@ -31,7 +31,7 @@
 	git push origin –delete bugfix (or) git push origin bugfix -d (or) git push origin : bugfix :: it will delete a remote branch in the repo
 	git cherry-pick : cherry pick means choose a commit from one branch and apply it onto another branch
 	git cherry-pick –abort : it will cancle the cherry operation
-	git fetch : it will get the update from git remote repo and will update your local repo. But it will not merge with local working copy
+	git fetch : it will get the update from git remote repo and will update your local repo but it will not meerge into local workspace. But it will not merge with local working copy
 	git revert <commit id> :  Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. Git revert is a safer alternative to git reset in regards to losing work.
     git reset : resetting is a way to move the the current tip of a branch to a previous commit. This can be done to remove commits from the current branch that we no longer want, or to undo any changes that have been made
     git pull : it will get the update from git remote repo and will update your local repo as well it will merge with local working copy also
