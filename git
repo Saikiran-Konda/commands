@@ -18,11 +18,14 @@
 	git revert <<commit id >> : it will revert the changes committed in that particular commit id from local repo
 	git push origin master -f : it will revert the changes from remote repo
 	git branch : it gives the brach names in current repository
-	git branch bugfix : it will crate the bugfix in local git repository
+	git branch -a : it will list all the branches
+	git branch bugfix : it will crfate the bugfix in local git repository
 	git branch -v : it will display all the branch names in your repo, and also tell you what branch you’re currently in
-	git checkout <<branch name >> : it will switch to specified branch
+	git checkout <<branch name >> : it will switch to specified branch 
+	git push -u origin <branch-name> : it will push newly created lranch in locallay to remote repo
 	git checkout bugfix : switch to bugfix branch
 	git diff master bugfix :
+	git merge <branch name> : to merge feature branch to master branch directly.
 	git merge bugfix : fix the conflicts
 	git push : pushing the code or changes from local repo to remote repo
 	git pull : pulling the code or changes from remote repo to local repo
@@ -54,3 +57,4 @@
 	git commit -am "commit message"  :  to add changes and commit updates at a same time
 	git
  
+	code .   : to view merge conflicts and redirtct to vs-code
