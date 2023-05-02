@@ -1,0 +1,80 @@
+- What is Docker ?
+  Docker is a tool which is used to automate the deployment of application in lightweight containers so the application ca work efficiently in different environments.
+  Containers are lightweight and portable units that package an application and its dependencies, allowing them to run consistently across different computing environments.
+- Uses
+  - Application isolation: Docker containers provide a level of isolation between applications and the underlying infrastructure, ensuring that applications run consistently regardless of the environment.
+  - Portability: Docker allows you to package an application and its dependencies into a container. This container can then be deployed on any system that has Docker installed, regardless of the operating system or infrastructure.
+  - Efficient resource utilization: Docker containers are lightweight and share the host system's operating system kernel. This means that they require fewer system resources compared to running each application on a separate virtual machine (VM).
+  - Rapid deployment and scaling: Docker simplifies the deployment process by encapsulating the entire application stack into a container. With Docker, you can easily deploy and scale applications in a matter of seconds.
+  Version control and reproducibility: Docker uses container images, which are read-only templates containing the application code and its dependencies. These images can be version controlled, making it easy to track changes and roll back to previous versions if needed.
+  - Continuous integration and delivery (CI/CD): Docker integrates well with CI/CD pipelines, allowing developers to build, test, and deploy applications efficiently. Docker images can be built and tested in a consistent and reproducible environment before being deployed to production.
+  - Microservices architecture: Docker is often used in conjunction with a microservices architecture, where an application is divided into smaller, decoupled services. Each microservice can be packaged and deployed as a separate container, making it easier to develop, test, and scale individual components.
+
+Docker Compose
+ Docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
+
+With Docker Compose, you can define a set of services that make up your application and specify their configurations and dependencies. Each service is typically defined by a separate Dockerfile, which contains instructions for building a Docker image. The Compose file then brings all these services together, allowing you to start, stop, and manage them as a single application.
+
+Here are some key features and uses of Docker Compose:
+    Service definition: In a Compose file, you can define multiple services, each representing a different component of your application. For example, you can have services for a web server, a database, and a message queue.
+    Configuration and dependencies: Compose allows you to specify various configurations for each service, such as environment variables, volumes, network connections, and container dependencies. This makes it easy to manage the interactions between different services.
+
+    Orchestration and scaling: Docker Compose provides commands to start, stop, and scale your application services. You can bring up the entire application stack with a single command, ensuring that all the containers are correctly configured and connected.
+
+    Networking and volumes: Compose enables you to define networks and volumes for your application. Networks can be created to facilitate communication between services, while volumes can be used for data persistence or sharing between containers.
+
+    Environment management: Compose allows you to define environment variables in the Compose file or load them from an external file. This makes it convenient to manage configuration settings across different environments, such as development, testing, and production.
+
+    Integration with other tools: Compose integrates well with other Docker ecosystem tools, such as Docker Swarm for orchestrating multi-node deployments and Docker Machine for managing Docker hosts on different platforms.
+
+By using Docker Compose, you can simplify the process of managing and deploying multi-container applications. It provides a convenient way to define, configure, and run your application stack consistently across different environments, making it an essential tool for containerized application development and deployment.
+
+Diff bw docker and docker compose
+  Docker is the underlying technology and platform that enables containerization, while Docker Compose is a tool built on top of Docker that focuses on managing multi-container applications. Docker provides the fundamental building blocks, and Docker Compose adds a layer of orchestration and configuration management to simplify the deployment and management of multi-container applications.
+
+what is container ?
+  A container is a lightweight, isolated and portable unit that encapsulates an application and all its dependencies, including libraries, binaries, and configuration files. Containers provide a consistent and reproducible environment for running applications across different computing environments, such as development machines, servers, and cloud platforms.
+  - Isolation: Containers provide process-level isolation, meaning that each container runs as an independent     process with its own file system, network interfaces, and allocated system resources.
+  - Portability: Containers are designed to be platform-agnostic and portable. Once an application is packaged into a container, it can run on any system that has a compatible container runtime, regardless of the underlying operating system or infrastructure.
+  -  Lightweight: Containers are lightweight compared to traditional virtual machines (VMs). Containers share the host system's operating system kernel and only contain the necessary components to run the application. This makes them more resource-efficient and faster to start and stop compared to VMs.
+  - Image-based: Containers are created from container images, which are read-only templates that include the application code, dependencies, and a runtime environment. Container images are typically built from a Dockerfile or similar configuration files and can be versioned, shared, and distributed across different systems.
+  - Orchestration: Container orchestration platforms, such as Kubernetes, enable the management and scaling of containers across multiple hosts or nodes. These platforms handle container scheduling, load balancing, and automatic scaling, allowing applications to run in a distributed and highly available manner.
+  Microservices architecture: Containers are often used in conjunction with a microservices architecture. In this approach, applications are divided into smaller, decoupled services, with each service running within its own container. This allows for easier development, deployment, and scalability of individual components.
+
+what is an image ?
+  In the context of containerization, an image refers to a read-only template that contains the necessary files, dependencies, and instructions to create a running instance of a container. It serves as the foundation for creating and running containers.
+
+Sample Docker file:
+  Docker can build images automatically by reading the instructions from a Dockerfile . A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
+########
+# Use an official Python runtime as the base image
+FROM python:3.9
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file to the container
+COPY requirements.txt .
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code to the container
+COPY . .
+
+# Expose a port (if needed)
+EXPOSE 8000
+
+# Specify the command to run when the container starts
+CMD ["python", "app.py"]
+#######
+
+########
+FROM ubuntu
+COPY myscript.sh /myscript.sh
+RUN chmod +x /myscript.sh
+ENTRYPOINT ["/myscript.sh"]
+CMD ["arg1", "arg2"]
+#########
+
+

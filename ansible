@@ -1,3 +1,15 @@
+Ansible :
+  automation tool, or platform, used for IT tasks such as configuration management, application deployment, intraservice orchestration, and provisioning.
+
+Ansible module:
+  Module is a re-usable, standalnoe script it can run on locally or remote
+
+what are the loops are availble in ansible
+  standard loop
+  complex loops
+  Do-until loops
+  
+
 https://mike42.me/blog/2019-01-the-top-100-ansible-modules
 ----------------------------------------------------Package Management---------------
 - name: Install a list of packages
