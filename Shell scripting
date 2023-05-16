@@ -1,0 +1,43 @@
+Check If a Process is Running ?? If not Make it Run otherwise "Print Process is Running" ?? 
+#!/bin/bash
+
+# Define the process name you want to check
+process_name="your_process_name"
+
+# Check if the process is running
+if pgrep -x "$process_name" >/dev/null; then
+    echo "Process is running."
+else
+    # Start the process
+    echo "Process is not running. Starting it now..."
+    # Replace the following line with the command to start your process
+    /path/to/your/process &    # Replace "/path/to/your/process" with the actual command to start your process
+fi
+
+Delete files older than 10 days using shell script in Unix [duplicate]
+#!/bin/bash
+
+# Define the directory path where you want to delete files
+directory="/path/to/your/directory"
+
+# Use the find command to locate files older than 10 days and delete them
+find "$directory" -type f -mtime +10 -exec rm {} \;
+
+
+Check if number is odd or even
+
+#!/bin/bash
+
+# Read the number from the user
+echo "Enter a number:"
+read number
+
+# Check if the number is odd or even
+if ((number % 2 == 0)); then
+    echo "The number is even."
+else
+    echo "The number is odd."
+fi
+
+
+

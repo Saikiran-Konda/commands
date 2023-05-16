@@ -1,5 +1,5 @@
 - What is Docker ?
-  Docker is a tool which is used to automate the deployment of application in lightweight containers so the application ca work efficiently in different environments.
+  Docker is a tool which is used to automate the deployment of application in lightweight containers so the application can work efficiently in different environments.
   Containers are lightweight and portable units that package an application and its dependencies, allowing them to run consistently across different computing environments.
 - Uses
   - Application isolation: Docker containers provide a level of isolation between applications and the underlying infrastructure, ensuring that applications run consistently regardless of the environment.
