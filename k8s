@@ -1,6 +1,30 @@
 ansible playbook for k8s
+to create minikube cluster:
+minikube start --cpus=4 --memory=4096
 
+to display minkube UI dashboard:
+minkube dashboard
 
+to switch to other namespace:
+kubectl config set-context --current --namespace=(name of the namespace)
+
+to edit the deployment:
+kubectl edit deployment deplyment-name
+
+to discribe specific pod:
+kubectl decribe pod pod-name
+
+to discribe specific service:
+kubectl describe service service-name
+
+to execute kubernetes file:
+kubectl apply -f filename.yaml
+
+to delete kubernetes file:
+kubectl delete -f filename.yaml
+
+to open services on browser:
+minikube service service-name
 ---
 - hosts: kubernetes
 #  become: true
@@ -18,3 +42,32 @@ ansible playbook for k8s
   tasks:
   - name: deploy regapp on kubernets
     command: kubectl apply -f /root/regapp-service.yml
+
+
+
+
+Kubernetes:
+volumes:
+node:
+pod: A Pod is similar to a set of containers with shared namespaces and shared filesystem volumes
+     basic & smallest unit
+     Abstrction over container
+     usually 1 application per pod
+     each pod gets its own ip address
+     new ip address on re-creation
+service: pod has its own service
+         perminent ip address
+         life cycle of pod and service not connected
+         inernal service and externaml service foe out side world
+ingress: 
+secrets:
+configmap:
+statefulset:
+Deployment:
+
+
+Layers of abstraction:
+  Deployment manges a replicaset
+  Replicaset manages all replicas of that pod
+  pod is an abstraction of a container
+
