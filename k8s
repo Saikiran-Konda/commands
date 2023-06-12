@@ -1,9 +1,15 @@
-ansible playbook for k8s
+
 to create minikube cluster:
 minikube start --cpus=4 --memory=4096
 
 to display minkube UI dashboard:
 minkube dashboard
+
+to create namespace:
+kubectl create namespace name-space-name
+
+dispaly namespaces list:
+kubectl get namespaces
 
 to switch to other namespace:
 kubectl config set-context --current --namespace=(name of the namespace)
@@ -25,6 +31,18 @@ kubectl delete -f filename.yaml
 
 to open services on browser:
 minikube service service-name
+
+enable ingress controller in kubernetes:
+minikube addons enable ingress
+
+Helm:
+  - package manager for kubernetes
+  - bundle of yaml files
+  - create our own Helm charts with Helm
+  - push them to Helm repository
+
+
+ansible playbook for k8s
 ---
 - hosts: kubernetes
 #  become: true
@@ -62,7 +80,9 @@ service: pod has its own service
 ingress: 
 secrets:
 configmap:
-statefulset:
+statefulset: any application that can store data
+  - stateful applications are like different database applications, and elastic search
+    and other.
 Deployment:
 
 
@@ -71,3 +91,9 @@ Layers of abstraction:
   Replicaset manages all replicas of that pod
   pod is an abstraction of a container
 
+Persistent Valueme(PVC):
+  - A persistent volume is a piece of storage in a cluster that an administrator has provisioned.
+  - It is a resource in the cluster, just as a node is a cluster resource.
+  - A persistent volume is a volume plug-in that has a lifecycle independent of any individual pod that uses the persistent volume
+
+  -- https://gitlab.com/nanuchi/youtube-tutorial-series/-/blob/master/kubernetes-volumes/persistent-volumes.yaml
