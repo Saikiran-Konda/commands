@@ -1,0 +1,22 @@
+Azure Fundamentals
+------------------
+Azure is a PAas(Plat form as a service)
+it is a cloud platform and it's services availabe over the internet, we can use the services to build, run and manage applications.
+it provides services virtually and components also
+
+-- virtual machines: it contains windows and linux vm'search
+-- service: it is used for billing purpose
+
+terms:
+-------
+service: some functanolity, we can create vm on azure
+subscription: this is for billing purpose
+resourece: is a part of the azure platform, 
+resource group: this is used to logically group your resouces
+
+
+Creating resource:
+-- subscription
+  -- resource group
+-- instance details
+  
