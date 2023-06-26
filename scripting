@@ -1,0 +1,144 @@
+read : it will take input dtata from user while running script
+echo : it will display output
+
+1) How to run a previous command from history listing?
+!nn
+where nn=the nuber of the command
+
+
+
+
+
+
+
+
+#!/bin/bash
+
+
+## defining variable
+#!/bin/bash
+a=sai
+b=kiran
+c='sai kiran'
+d= 'any command'
+
+echo first name is $a
+echo second name is $b
+echo full name is $c
+echo $d
+
+## input and output
+#!/bin/bash
+echo enter your name
+read name
+echo
+echo your name is $name
+
+### using if then
+#!/bin/bash
+count=100
+if [ $count -eq 100 ]
+then
+  echo Count is 100
+else
+  echo Count is not 100
+fi
+
+#!/bin/bash
+
+clear
+if [ -e /home/error.txt ]
+  then
+  echo file exist
+  else
+  echo file naot exist
+fi
+
+#!/bin/bash
+
+a=`date | awk '{print $1}'`
+if [ "$a == mon" ]
+  then
+  echo today is $a
+  else
+  echo today is not monday
+fi
+
+#!/bin/bash
+
+clear
+echo
+echo "what is your name"
+echo
+read a
+echo
+echo Hello $a sir
+echo "do you like working in it? (y/n)"
+read Like
+echo
+if [ "$Like" == y ]
+then 
+echo your are cool
+elif [ "$Like" == n ]
+then
+echo you sholud try
+echo
+fi
+
+## For loop
+#!/bin/bash
+
+for i in 1 2 3 4 5
+do
+echo "welcome $i times"
+done
+
+## Do While
+#!/bin/bash
+
+while [ condition ]
+do
+  command 1
+  command 2
+done
+
+#!/bin/bash
+
+count=0
+num=10
+while [ $count -lt 10 ]
+do  
+  echo
+  echo $num seconds left to stop the process $1
+  echo
+  sleep 1
+
+num=`expr $num - 1`         ##expr is expression
+count=`expr $count + 1`
+done
+echo
+echo $1 process is stopped!!!
+echo
+
+## Case statement scripts ( optional )
+
+#!/bin/bash
+echo
+echo "please choose one of the option"
+echo
+echo 'a = display date and time'
+echo 'b = list file and directories'
+echo 'c = list users looged in'
+echo 'd = check system uptime'
+echo
+
+read choices
+case $choices in
+
+a) date;;
+b) ls;;
+c) who;;
+d) uptime;;
+*) echo invalid choice - bye.
+esac
+
